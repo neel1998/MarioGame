@@ -1,24 +1,26 @@
-def draw_brick(self,bricks):
-	level1=self.level1
-	for i in bricks:
-		# for j in i:
-			x=i.x
-			y=i.y
-			t=i.t
-			if t==-2:
-				char="X"
-			else:
-				char='\033[91m'+str(t)+'\033[0m'
-			level1[y][x]="X"
-			level1[y][x+1]="X"
-			level1[y][x+2]="X"
-			level1[y][x+3]="X"
-			level1[y+1][x]="X"
-			level1[y+1][x+3]="X"
-			level1[y+2][x]="X"
-			level1[y+2][x+1]="X"
-			level1[y+2][x+2]="X"
-			level1[y+2][x+3]="X"
+'''function to draw bricks'''
+def draw_brick(self, bricks):
+    '''draw function'''
+    level1 = self.level1
+    for i in bricks:
+            # for j in i:
+        cordx = i.posx
+        cordy = i.posy
+        btype = i.type
+        if btype == -2:
+            char = "X"
+        else:
+            char = '\033[91m' + str(btype) + '\033[0m'
+        level1[cordy][cordx] = "X"
+        level1[cordy][cordx + 1] = "X"
+        level1[cordy][cordx + 2] = "X"
+        level1[cordy][cordx + 3] = "X"
+        level1[cordy + 1][cordx] = "X"
+        level1[cordy + 1][cordx + 3] = "X"
+        level1[cordy + 2][cordx] = "X"
+        level1[cordy + 2][cordx + 1] = "X"
+        level1[cordy + 2][cordx + 2] = "X"
+        level1[cordy + 2][cordx + 3] = "X"
 
-			level1[y+1][x+1]=char
-			level1[y+1][x+2]=char
+        level1[cordy + 1][cordx + 1] = char
+        level1[cordy + 1][cordx + 2] = char

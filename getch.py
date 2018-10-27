@@ -1,3 +1,4 @@
+'''get character module'''
 class _getChUnix:
     '''class to take input'''
 
@@ -19,3 +20,9 @@ class _getChUnix:
         finally:
             termios.tcsetattr(fedvar, termios.TCSADRAIN, old_settings)
         return charvar
+    def dum1(self):
+        '''dummy method1'''
+        return self
+    def dum2(self):
+        '''dummy method 2'''
+        return self

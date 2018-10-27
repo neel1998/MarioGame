@@ -1,4 +1,12 @@
-class coin:
-	def __init__(self,x,y):
-		self.x=x
-		self.y=y
+'''coid module'''
+class Coin:
+    '''coin class'''
+    def __init__(self, x, y):
+        self.posx = x
+        self.posy = y
+    def get_x(self):
+        '''getter for x'''
+        return self.posx
+    def get_y(self):
+        '''getter for y'''
+        return self.posy
